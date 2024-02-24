@@ -9,6 +9,7 @@
     * [Funcionalidades](#instalação)
   * [funcionamento](#funcionamento)
     * [Estrutura Digital](#funcionamentoDigital)
+    * [Contadores Assincornos](#contadores-Assincronos)
  
   
   
@@ -59,16 +60,39 @@ Os latches ou flip-flops são compostos por portas lógicas (NAND ou NOR). A int
 
 Circuitos lógicos sequenciais são caracterizados pela realimentação das saídas para as entradas, conhecida como estado interno. Isso faz com que as condições atuais das entradas e do estado interno determinem a condição futura da saída.</p>
 
+<p align="center">
+  <img alt="Readme" title="Readme" src="./imagens/Capturar.PNG"/> 
+ </p>
 
+<br></br>
+ 
+ ### FLip-Flop JK
 
+<br></br>
 
+ <p align="center">
+  <img alt="Readme" title="Readme" src="./imagens/3.PNG"/> 
+ </p>
 
+<br></br>
 
+## Contadores Assíncronos 
 
+<p>Contadores são diversos Flip-flop ligados entre eles, onde cada flip-flop vai armazenar um bit do nosso valor numérico. </p>
 
+<p align="center">
+  <img alt="Readme" title="Readme" src="./imagens/4.PNG"/> 
+ </p>
 
+<br></br>
 
+<p>No exemplo, podemos contar até o número 15, o que equivale a 2^4 (16 valores de 0 a 15).
 
+A cada pulso do nosso clock "CP0", ocorre uma alteração no estado do primeiro Flip-Flop JK. Assim, ao iniciar, temos 0000; após o primeiro pulso, obtemos 0001; depois 0010; e assim por diante, até atingir o máximo, que seria 1111.</p>
+
+<br>
+
+### Contador modulo 6 e contador BCD 
 
 
 
