@@ -4,25 +4,23 @@
 
 ## Tabela de conteúdos
 <!-----ts----->
-  * [sobre](#sobre)
-    * [instalação](#instalação)
-    * [Funcionalidades](#instalação)
-  * [funcionamento](#funcionamento)
-    * [Estrutura Digital](#funcionamentoDigital)
-    * [Contadores Assincornos](#contadores-Assincronos)
- 
-  
-  
+  * [Sobre](#sobre)
+    * [Instalação](#instalação)
+    * [Funcionalidades](#funcionalidades)
+  * [Funcionamento](#funcionamento)
+    * [Estrutura Digital](#estrutura-digital)
+    * [Contadores Assincornos](#contadores-assincronos)
+  * [Conclusões](#conclusões)
+  * [Contatos](#contatos)
 
 
-
-# sobre
+# Sobre
 <P>Como todo desenvolvedor iniciante, um dos primeiros estudos é o raciocínio lógico. Assim como em trabalhos escolares e práticas de raciocínio lógico, o desafio foi criar um relógio 100% digital utilizando apenas flip-flops, portas lógicas e números binários.</P>
 
 <br>
 
 
-## instalação
+## Instalação
 
 ```bash
 1- Faça o download do simulador Digital Works
@@ -92,21 +90,108 @@ A cada pulso do nosso clock "CP0", ocorre uma alteração no estado do primeiro 
 
 <br>
 
-### Contador modulo 6 e contador BCD 
+### Contador modulo 6 e contador-BCD 
 
+<p>Para o projeto, são utilizados contadores BCD e módulo 6 para registrar os minutos e segundos. O contador BCD é responsável pela contagem de 0 a 9, representando as unidades, enquanto o módulo 6 realiza a contagem das dezenas de 0 a 5. Combinando esses dois contadores, obtemos uma contagem completa de 00 a 59, abrangendo tanto minutos quanto segundos. Essa abordagem proporciona uma maneira eficiente e precisa de rastrear o tempo no intervalo desejado.</p>
 
+<br></br>
 
+#### Módulo 6
 
+<p align="center">
+   <img alt="Readme" title="Readme" src="./imagens/dec6.PNG"/> 
+ </p>
+ <p align="center">
+   <img alt="Readme" title="Readme" src="./imagens/con6-.PNG"/> 
+ </p>
 
+<br></br>
 
+#### Contador BCD
 
+<p align="center">
+   <img alt="Readme" title="Readme" src="./imagens/bcd.PNG"/> 
+ </p>
+ <p align="center">
+   <img alt="Readme" title="Readme" src="./imagens/bcd-.PNG"/> 
+ </p>
 
+<br></br>
 
+## Formato AM/PM e 24 horas
 
+<p>Para implementar a mudança entre o formato de 24 horas e o formato de AM/PM no módulo das horas, foi necessário incorporar um somador-subtrator ao circuito. Esse componente permite adicionar ou subtrair 12 horas ao valor atual, conforme necessário, facilitando a transição entre os diferentes formatos de tempo.
 
+Por exemplo, quando o relógio marca 1h da manhã (AM), não é necessário adicionar 12 horas ao horário atual ao mudar para o formato de 24 horas. No entanto, quando o relógio marca 1h da tarde (PM) e ocorre a mudança de formato, o circuito automaticamente adiciona 12 horas ao horário atual, convertendo-o para o formato de 24 horas, assim as horas que eram 1h(PM) passa a ser 13h(formato 24h).
 
+Uma das dificuldades adicionais encontradas foi a decodificação dos números binários para exibição nos displays de 7 segmentos. Esses displays são capazes de mostrar apenas os números de 0 a 9, então como exibir os valores de 10 a 23? A solução foi desenvolver um decodificador de 5 bits, abrangendo a faixa de 0 a 31. Esse decodificador manipula os bits de entrada para que sejam exibidos corretamente em formato BCD nos displays de 7 segmentos.
 
+Por exemplo, quando a hora é 20h, o decodificador separa os algoritmos para os dígitos 2 e 0, permitindo que cada display de 7 segmentos exiba os dígitos separadamente, proporcionando uma visualização clara e precisa da hora atual no formato de 24 horas. Essa abordagem resolve o problema de exibição de horas acima de 9 nos displays de 7 segmentos, garantindo uma representação completa e legível do tempo.</p>
 
+<p align="center">
+  <img alt="Readme" title="Readme" src="./imagens/mod24.PNG"/>
+</p>
+<p align="center">
+  <img alt="Readme" title="Readme" src="./imagens/AMPM.PNG"/>
+</p>
+<p align="center">
+  <img alt="Readme" title="Readme" src="./imagens/soma.PNG"/>
+</p>
 
+<br></br>
 
+## Decodificador de 5 bits
 
+<br></br>
+
+<p align="center">
+  <img alt="Readme" title="Readme" src="./imagens/dec de 5bits.PNG"/>
+</p>
+
+<br></br>
+
+## Decodficador BCD para 7segmentos
+
+<br></br>
+
+<p align="center">
+  <img alt="Readme" title="Readme" src="./imagens/deco 7seg.PNG"/>
+</p>
+
+<br></br>
+
+<p align="center">
+  <img alt="Readme" title="Readme" src="./imagens/es dec 7 seg.PNG"/>
+</p>
+
+# Conclusões
+
+<p> Este projeto foi uma oportunidade valiosa para aprimorar minhas habilidades de raciocínio lógico e trabalhar com números binários em um ambiente prático. Ao enfrentar desafios como decodificação de números binários e implementação de circuitos de contagem, fui capaz de desenvolver minha capacidade de resolver problemas de forma eficaz e encontrar soluções criativas. Essa experiência não apenas solidificou meus conhecimentos em lógica digital, mas também me preparou para enfrentar desafios semelhantes em futuros projetos de programação que envolva raciocíonio lógico.</p>
+
+<br>
+
+## Recomendações sobre eletrônica digital 
+
+<p>
+  <a href="https://youtu.be/cG7wemiantQ?si=bvzGcG1oVMAjkyOI">Somador-Subtrator</a>
+</p>
+<p>
+  <a href="https://youtu.be/2_UE7Pl-1yE?si=qpLeCtb88uoFj68M">Flip-Flop</a>
+</p>
+<p>
+  <a href="https://youtu.be/XX76xNpDu68?si=zhYbO8m6KBGg2IR1">Contadores</a>
+</p>
+
+<br>
+
+# Contatos
+
+<p> Linkedin: 
+  <a href="www.linkedin.com/in/gabrielplamer">gabrielplamer</a>
+</p>
+<p> Email: gabrielplamerif@gmail.com
+</p>
+<p> Contato: 53999602701
+</p>
+
+#
