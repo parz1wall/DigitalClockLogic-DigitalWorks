@@ -2,6 +2,14 @@
 
 <p align="center"> Esse projeto... </p>
 
+<br>
+
+<h1 align="center">
+  <img alt="Readme" title="Readme" src="./imagens/Animação.gif"/> 
+ </h1>
+
+<br>
+
 ## Tabela de conteúdos
 <!-----ts----->
   * [Sobre](#sobre)
