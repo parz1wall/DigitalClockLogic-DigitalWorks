@@ -1,6 +1,6 @@
 <h1 align="center">DigitalClockLogic-DigitalWorks</h1>
 
-<p align="center"> Esse projeto... </p>
+<p align="center"> Esse projeto foi feito para a prática de Raciocínio Lógico utilizando números Binários...  </p>
 
 <br>
 
@@ -17,7 +17,7 @@
     * [Funcionalidades](#funcionalidades)
   * [Funcionamento](#funcionamento)
     * [Estrutura Digital](#estrutura-digital)
-    * [Contadores Assincornos](#contadores-assincronos)
+    * [Contadores Assincornos](#Contadores-Assincronos)
   * [Conclusões](#conclusões)
   * [Contatos](#contatos)
 
@@ -32,12 +32,12 @@
 
 ```bash
 1- Faça o download do simulador Digital Works
-$ Arquivo: _______
+$ Arquivo: DigitalWorks.zip
 
-3- Faça o download do projeto
-$ Arquivo: _______
+2- Faça o download do projeto
+$ Arquivo: RELOGIO FINAL.dwm
 
-4- Abra o projeto utilizando o simulador
+3- Abra o projeto utilizando o simulador
 ```
 <br>
 
